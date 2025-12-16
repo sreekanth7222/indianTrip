@@ -1,0 +1,147 @@
+/* sectionTemples.css */
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #050816;
+  color: #e5e5e5;
+}
+
+/* Background and layout */
+.section-temples-bg-container {
+  min-height: 100vh;
+  padding: 24px;
+  background: radial-gradient(circle at top, #1b3358 0, #050816 55%);
+}
+
+/* Main heading */
+.main-heading {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: #f5d07f; /* soft gold accent */
+}
+
+/* Description + image wrapper */
+.description-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 4px 20px;
+  flex-wrap: wrap;
+}
+
+/* Description paragraph */
+.description {
+  max-width: 900px;
+  font-size: 15px;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+/* Cards container */
+.list-of-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;             /* space between cards */
+}
+
+/* Single card */
+.card-container {
+  background-color: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 260px;          /* base card width on desktop */
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-container:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.6);
+  border-color: #60a5fa;              /* brighter blue on hover */
+}
+
+.card-container:active {
+  transform: scale(1.06);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.7);
+}
+
+/* Card image */
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Card text */
+.card-name {
+  font-size: 18px;
+  margin: 10px 12px 4px;
+  color: #ffffff;
+  text-align: start;
+}
+
+.card-location {
+  font-size: 13px;
+  margin: 0 12px 6px;
+  color: #9ca3af;
+  text-align: start;
+}
+
+.about-card {
+  font-size: 13px;
+  margin: 0 12px 12px;
+  color: #d1d5db;
+  text-align: start;
+}
+
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 992px) {
+  .section-temples-bg-container {
+    padding: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .card-container {
+    width: 220px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .section-temples-bg-container {
+    padding: 12px;
+  }
+
+  .main-heading {
+    font-size: 26px;
+  }
+
+  .description-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .description {
+    font-size: 14px;
+    padding: 0 4px;
+  }
+
+  .card-container {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+

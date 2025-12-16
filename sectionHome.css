@@ -1,0 +1,342 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background */
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #0b1021, #111827);
+  color: #e5e7eb;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 10px 24px;
+  background: rgba(15, 23, 42, 0.95);
+  color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-heading {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+header nav a {
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 14px;
+  color: #e5e7eb;
+  transition: color 0.2s ease;
+}
+
+header nav a:hover {
+  color: #34d399;
+}
+
+/* Main background container */
+.bg-container {
+  min-height: 100vh;
+  padding: 32px 20px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Home top section: carousel + intro */
+.section-home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+/* Carousel */
+.carousel {
+  flex: 1 1 55%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.carousel-item img {
+  height: 360px;
+  object-fit: cover;
+}
+
+/* Intro content next to carousel */
+.carousels-intro-conatiner {
+  flex: 1 1 40%;
+  background: radial-gradient(circle at 10% 10%, #1c2d4f 0, #020617 60%);
+  border-radius: 16px;
+  padding: 20px 22px;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+.carousels-intro-conatiner h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #a5b4fc;
+  margin-bottom: 10px;
+}
+
+.carousels-intro-conatiner p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: 10px;
+}
+
+.carousels-intro-conatiner ul {
+  list-style-type: disc;
+  padding-left: 18px;
+}
+
+.carousels-intro-conatiner li {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 4px;
+}
+
+/* Must visit places section */
+.must-visit-places-container {
+  margin-top: 10px;
+}
+
+.must-visit-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 18px;
+}
+
+/* Cards grid */
+.must-visit-cards-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Each card */
+.card-container {
+  width: 160px;
+  text-align: center;
+}
+
+/* Button + image */
+.button-visit {
+  width: 100%;
+  border: none;
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: transparent;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Hover and click effect */
+.button-visit:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+}
+
+.button-visit:active {
+  transform: scale(1.06);
+}
+
+/* Card name */
+.card-name {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Visitors section */
+.visitors-section {
+  margin-top: 28px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.visitors-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 6px;
+}
+
+.visitors-subtitle {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 14px;
+  max-width: 520px;
+}
+
+/* Layout: bars + reviews side by side */
+.visitors-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Left: bar stats card */
+.visitors-bars {
+  flex: 1 1 260px;
+  background: #020617;
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.visitor-row {
+  margin-bottom: 10px;
+}
+
+.visitor-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #e5e7eb;
+}
+
+.country-name {
+  font-weight: 500;
+}
+
+.country-value {
+  color: #a5b4fc;
+}
+
+.bar-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #111827;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+/* Different colors and widths to mimic a bar chart */
+.bar-us {
+  width: 90%;
+  background: #22c55e;
+}
+
+.bar-uk {
+  width: 70%;
+  background: #60a5fa;
+}
+
+.bar-bd {
+  width: 60%;
+  background: #f97316;
+}
+
+.bar-ca {
+  width: 55%;
+  background: #ec4899;
+}
+
+.bar-au {
+  width: 50%;
+  background: #eab308;
+}
+
+/* Right: reviews card */
+.visitors-right {
+  flex: 1 1 260px;
+}
+
+.visitors-reviews {
+  background: #020617;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+.visitors-reviews h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #e5e7eb;
+}
+
+.visitors-review {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .section-home {
+    flex-direction: column;
+  }
+
+  .carousel-item img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .visitors-layout {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .logo-heading {
+    font-size: 20px;
+  }
+
+  .carousels-intro-conatiner {
+    padding: 16px 18px;
+  }
+}
